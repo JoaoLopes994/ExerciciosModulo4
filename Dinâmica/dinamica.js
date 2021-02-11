@@ -44,7 +44,7 @@ async function fetchDezNomes(url){
     for(let i=0; i<10; i++){
     
         array.push(resp2.Meals[i].strMeals)
-        console.log(i+1, " ", resp2.Meals[i])
+        
     }
 
     console.log(array)
