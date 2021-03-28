@@ -18,3 +18,5 @@ company = {
 
 const resultado = company.name + ', ' + company.products.shirts.colors[1]
 
+console.log(resultado)
+

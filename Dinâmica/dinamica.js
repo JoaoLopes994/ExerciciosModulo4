@@ -18,9 +18,14 @@ console.log("resposta é:", somar(...array));
 //Região: [area]
 //Ingredientes: [ingredientes (string única)]
 //Instruções: [instruções]
-
-
-//Inacabado... :/
+const fetch = require('node-fetch');
+fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772')
+.then((response)=>{
+    if (response.ok) return response.json()
+})
+.then((data)=>{
+    console.log(data)
+})
 
 
 

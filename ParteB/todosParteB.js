@@ -1,9 +1,25 @@
 //Parte B - Hora do Jogo!
 //Passe a expressão abaixo para Arrow Function e então use destructuring para pegar ​colors
-var getShirtsColorsAmount = function (company) {
+company = {
+	name: "ACME Corp",
+	address: "Nowhere st",
+	products: {
+		shirts: {
+			colors: ["red", "green", "blue"],
+		},
+		socks: {
+			colors: ["cyan", "magenta", "yellow"],
+		},
+	},
+
+}
+
+const getShirtsColorsAmount = (company) => {
     colors = company.products.shirts.colors;
     return colors.length;
 };
+
+console.log(getShirtsColorsAmount(company))
 
 
 
@@ -20,7 +36,8 @@ const clothes = {
     shirts: { colors: ['white', 'red'] },
     socks: { colors: ['beige', 'gray'] },
 };
-
+const {shirts, socks} = clothes;
+console.log(shirts, socks)
 
 
 
@@ -35,6 +52,16 @@ const clothes = {
 const arr = [1, 2, 3];
 const arr2 = [4, 5, 6];
 
+const array = = [...arr].filter((e, i) => {
+    return i > 0;
+})
+
+const segundoArray = [arr2].filter((e, i) =>{
+    return i > 0;
+})
+
+console.log(array)
+consolee.log(segundoArray)
 
 
 
@@ -50,8 +77,11 @@ var persons = [
     { firstname: 'Jayne', lastname: 'Cobb' },
 ];
 
+const nomeTodo = [...persons].map((elemento) => {
+    return elemento.firstname+ "" +elemento.lastname
+})
+
+console.log(nomeTodo)
 
 
 
-
-//Inacabados... :/
